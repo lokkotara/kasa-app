@@ -1,0 +1,19 @@
+import './Gallery.css'
+import Card from '../Card/Card'
+import {getAllAccomodations} from '../../datas/dataManager.js'
+
+export default function Gallery() {
+    const accomodations = getAllAccomodations()
+    console.log(accomodations);
+    return (
+        <div className="galleryContainer">
+            {accomodations.map((item) => (
+                <Card
+                    key={item.id}
+                    title={item.title}
+                    cover={item.cover}
+                />
+            ))}
+        </div>
+    )
+}

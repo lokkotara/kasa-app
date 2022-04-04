@@ -1,0 +1,31 @@
+.accomodationCard {
+    position: relative;
+}
+.accomodationCard a{
+    text-decoration: none;
+}
+
+.accomodationCard h1 {
+    color: white;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.accomodationCard .cardGradient {
+    height: 170px;
+    width: 100%;
+    background: linear-gradient(transparent, black);
+    position: absolute;
+    bottom: 5px;
+    border-radius: 10px;
+}
+
+.accomodationCard .thumbs {
+    width: 340px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 10px;
+}

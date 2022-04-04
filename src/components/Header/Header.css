@@ -1,0 +1,24 @@
+.mainHeader {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 63px;
+}
+.mainHeader>img {
+    height: 4.25rem;
+}
+.mainHeader>nav ul {
+    display: flex;
+    list-style-type: none;
+}
+.mainHeader>nav li {
+    font-size: 24px;
+    color: #ff6060;
+}
+.mainHeader>nav li:not(:first-child) {
+    margin-left: 1rem;
+}
+.mainHeader>nav a {
+    text-decoration: none;
+    color: inherit;
+}
