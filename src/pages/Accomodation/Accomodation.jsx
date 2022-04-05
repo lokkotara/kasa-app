@@ -1,6 +1,10 @@
 import './Accomodation.css';
 import {useParams} from 'react-router-dom';
-import {getAccomodation} from '../../datas/dataManager'
+import {getAccomodation} from '../../datas/dataManager';
+import fullStar from '../../assets/full-star.svg'
+import emptyStar from '../../assets/empty-star.svg'
+import Dropdown from '../../components/Dropdown/Dropdown'
+
 
 function Accomodation() {
 
@@ -14,15 +18,21 @@ function Accomodation() {
             <p>nom : {accomodation.title}</p>
             <p>{accomodation.host.name}</p>
             <img src= {accomodation.host.picture} alt="" />
-            <p>description : {accomodation.description}</p>
-            <p>{parseInt(accomodation.rating)}</p>
+            <Dropdown 
+                props={accomodation.description}
+            />
+            <Dropdown 
+                props={accomodation.equipments}
+            />
             {range.map(ratingElem =>(
-                parseInt(accomodation.rating) >= ratingElem ? <img src="../../assets/full-star.png" alt=""/> : <img src="../../assets/empty-star.png" alt=""/>
+                parseInt(accomodation.rating) >= ratingElem ? <img src={fullStar} alt=""/> : <img src={emptyStar} alt=""/>
             ))}
             <p>{accomodation.location}</p>
-            {accomodation.tags.map(tag=> (
+            <div className="tagContainer">
+                {accomodation.tags.map(tag=> (
                 <span>{tag}</span>
             ))}
+            </div>
         </div>
     )
 }
