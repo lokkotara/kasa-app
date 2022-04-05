@@ -2,9 +2,10 @@ import { Link } from 'react-router-dom'
 import './Card.css'
 
 function Card({title, cover, id}) {
+
 	return (
 		<div>
-			<Link to="/Accomodation">
+			<Link to={`/Accomodation/${id}`}>
 				<article className="accomodationCard">
 						<img className="thumbs" src={cover} alt="" />
 						<div className="cardGradient">

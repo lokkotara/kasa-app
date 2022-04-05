@@ -4,7 +4,6 @@ import {getAllAccomodations} from '../../datas/dataManager.js'
 
 export default function Gallery() {
     const accomodations = getAllAccomodations()
-    console.log(accomodations);
     return (
         <div className="galleryContainer">
             {accomodations.map((item) => (
@@ -12,6 +11,7 @@ export default function Gallery() {
                     key={item.id}
                     title={item.title}
                     cover={item.cover}
+                    id={item.id}
                 />
             ))}
         </div>
