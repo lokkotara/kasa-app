@@ -3,9 +3,9 @@ import './Dropdown.css'
 function Dropdown({props}) {
 
 	return (
-		<div>
+		<article className="dropdown">
 			{props}
-		</div>
+		</article>
 	)
 }
 

@@ -2,9 +2,10 @@ import './Footer.css'
 
 function Footer() {
     return (
-        <div>
-            <h1>Footer</h1>
-        </div>
+        <footer>
+            <img src="./images/logo_small.svg" alt=""/>
+            <p>© 2020 Kasa. All rights reserved</p>
+        </footer>
     )
 }
 
