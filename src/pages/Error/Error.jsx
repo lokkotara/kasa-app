@@ -1,9 +1,16 @@
-import './Error.css'
+import { Link } from "react-router-dom";
+import "./Error.scss";
 
 function Error() {
-    return (
-        <h1>Erreur 404</h1>
-    )
+  return (
+    <div>
+      <h1>404</h1>
+      <p>Oups ! La page que vous demandez n'existe pas.</p>
+      <Link to="/">
+        <p>Retourner sur la page d'accueil</p>
+      </Link>
+    </div>
+  );
 }
 
-export default Error
+export default Error;

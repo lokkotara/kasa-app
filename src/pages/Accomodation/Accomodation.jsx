@@ -1,15 +1,23 @@
-import "./Accomodation.css";
+import "./Accomodation.scss";
 import { useParams } from "react-router-dom";
 import { useState } from 'react';
 import { getAccomodation } from "../../datas/dataManager";
 import Hero from "../../components/Hero/Hero";
 import Dropdown from "../../components/Dropdown/Dropdown";
+// @ts-ignore
+import emptyStar from "../../assets/empty-star.svg";
+// @ts-ignore
+import fullStar from "../../assets/full-star.svg";
+
 
 function Accomodation() {
   let { id } = useParams();
   const accomodation = getAccomodation(id);
   const range = [1, 2, 3, 4, 5];
 	const [currentPic, setCurrentPic] = useState(0);
+  const name = accomodation.host.name.split(" ")
+  const firstname = name[0]
+  const lastname = name[1]
 
 	/**
 	 * Permet de gérer la rotation infini du caroussel d'images
@@ -48,29 +56,33 @@ function Accomodation() {
           </div>
           <div className="tagContainer">
             {accomodation.tags.map((tag) => (
-              <span className="tag">{tag}</span>
+              <span className="tag" key={tag}>{tag}</span>
             ))}
           </div>
         </div>
         <div className= "headingSecondPart">
           <div className="ownerIdentity">
-            <p>{accomodation.host.name}</p>
+            <div className="ownerName">
+              <p>{firstname}</p>
+              <p>{lastname}</p>
+            </div>
             <img src={accomodation.host.picture} alt="" />
           </div>
           <div className="rating">
-            {range.map((ratingElem) =>
-              parseInt(accomodation.rating) >= ratingElem ? (
-                <i className="fas fa-star full"></i>
+            {range.map((ratingElt, index) =>
+              parseInt(accomodation.rating) >= ratingElt ? (
+                <img src={fullStar} alt="" key={"fs"+index}/>
+                
               ) : (
-                <i className="fas fa-star empty"></i>
+                <img src={emptyStar} alt="" key={"es"+index}/>
               )
             )}
           </div>
         </div>
       </section>
       <section className="DropdownContainer">
-        <Dropdown props={accomodation.description} />
-        <Dropdown props={accomodation.equipments} />
+        <Dropdown content={accomodation.description} title="description" key={accomodation.id+"desc"}/>
+        <Dropdown content={accomodation.equipments} title="equipements" key={accomodation.id+"equip"}/>
       </section>
     </main>
   );

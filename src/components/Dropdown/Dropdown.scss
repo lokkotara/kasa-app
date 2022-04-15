@@ -1,0 +1,24 @@
+.dropdown {
+    flex: 1;
+    
+    .dropdownHeading {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        background-color: #FF6060;
+        color: #fff;
+        border-radius: 10px;
+    }
+    .dropdownContent {
+        color: #FF6060;
+        background-color: #F6F6F6;
+        margin: 0;
+        padding: 1rem;
+        padding-top: 1.5rem;
+        border-radius: 10px;
+        min-height: 10rem;
+        li {
+            list-style: none;
+        }
+    }
+}
