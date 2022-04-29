@@ -3,6 +3,7 @@
     width: 100%;
     justify-content: space-between;
     margin-bottom: 63px;
+    grid-area: header;
 }
 .mainHeader>img {
     height: 4.25rem;
@@ -13,10 +14,15 @@
 }
 .mainHeader>nav li {
     font-size: 24px;
+    font-weight: 500;
     color: #ff6060;
+    .active {
+        // border-bottom: 1px solid #ff6060;
+        text-decoration: underline;
+    }
 }
 .mainHeader>nav li:not(:first-child) {
-    margin-left: 1rem;
+    margin-left: 4rem;
 }
 .mainHeader>nav a {
     text-decoration: none;

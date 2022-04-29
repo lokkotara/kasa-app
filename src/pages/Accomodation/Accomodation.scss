@@ -1,5 +1,6 @@
-.heroContainer {
+.accomodationContainer .heroContainer {
     height: 415px;
+    margin-top: 20px;
     .chevron {
         font-size: 4.9em;
         position: absolute;
@@ -29,6 +30,9 @@
     justify-content: space-between;
     margin-bottom: 2rem;
     margin-top: 2rem;
+    .tagContainer {
+        margin-top: 2rem;
+    }
 }
 .headingFirstPart {
     display: flex;
@@ -59,8 +63,9 @@
     .rating {
         display: flex;
         justify-content: space-evenly;
-        .fa-star {
-            font-size: 2rem;
+        margin-top: 1rem;
+        >img {
+            margin-left: 0.7rem;
         }
     }
     .ownerIdentity {
@@ -93,6 +98,9 @@
 .DropdownContainer {
     display: flex;
     .dropdown:not(:first-child) {
-        margin-left: 1rem;
+        margin-left: 4rem;
+    }
+    .fas {
+        font-size: 1.5rem;
     }
 }

@@ -24,24 +24,12 @@ function Accomodation() {
 	 * @param {"previous"|"next"} order 
 	 */
 	function manageCarousel(order) {
-		if(order ==="previous") {
-			if(currentPic === 0) {
-				setCurrentPic(accomodation.pictures.length - 1)
-			} else {
-				setCurrentPic(currentPic-1)
-			}
-		}
-		if(order ==="next") {
-			if(currentPic === accomodation.pictures.length - 1) {
-				setCurrentPic(0)
-			} else {
-				setCurrentPic(currentPic+1)
-			}
-		}
+		if(order ==="previous") currentPic === 0 ? setCurrentPic(accomodation.pictures.length - 1) : setCurrentPic(currentPic-1)
+		if(order ==="next") currentPic === accomodation.pictures.length - 1 ? setCurrentPic(0) : setCurrentPic(currentPic+1)
 	}
 
   return (
-    <main>
+    <main className="accomodationContainer">
       <Hero>
         <i className="fas fa-chevron-left chevron chevron-left" onClick={() => manageCarousel("previous")}></i>
         <img src={accomodation.pictures[currentPic]} alt="" />
@@ -81,8 +69,8 @@ function Accomodation() {
         </div>
       </section>
       <section className="DropdownContainer">
-        <Dropdown content={accomodation.description} title="description" key={accomodation.id+"desc"}/>
-        <Dropdown content={accomodation.equipments} title="equipements" key={accomodation.id+"equip"}/>
+        <Dropdown content={accomodation.description} title="Description" key={accomodation.id+"desc"}/>
+        <Dropdown content={accomodation.equipments} title="Equipements" key={accomodation.id+"equip"}/>
       </section>
     </main>
   );

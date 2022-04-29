@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './Header.scss'
 
 function Header() {
@@ -7,8 +7,8 @@ function Header() {
             <img src='/images/logo_small.svg' alt="logo de l'agence Kasa"></img>
             <nav>
                 <ul>
-                    <li><Link to="/">Accueil</Link></li>
-                    <li><Link to="/About">À propos</Link></li>
+                    <li><NavLink to="/" className={ navData => navData.isActive ? "active" : "" }>Accueil</NavLink></li>
+                    <li><NavLink to="/About" className={ navData => navData.isActive ? "active" : "" }>À Propos</NavLink></li>
                 </ul>
             </nav>
         </header>

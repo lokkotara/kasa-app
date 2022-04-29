@@ -1,6 +1,7 @@
 .aboutContainer {
     display: flex;
     flex-direction: column;
+    margin-top: 2rem;
     .dropdown:not(:first-child) {
         margin-top: 1rem;
     }

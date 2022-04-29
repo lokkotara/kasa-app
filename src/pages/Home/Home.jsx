@@ -4,7 +4,7 @@ import Gallery from '../../components/Gallery/Gallery'
 
 function Home() {
   return (
-    <main>
+    <main className="homeContainer">
       <Hero>
         <h1>Chez vous, partout et ailleurs</h1>
         <img src="/images/bg_image.jpg" alt="" />

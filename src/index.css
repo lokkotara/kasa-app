@@ -4,3 +4,14 @@ body {
   font-family: 'Montserrat', sans-serif;
   max-width: 1240px;
 }
+#root {
+  display:grid;
+  grid-template-areas: "header" "page" "footer";
+  /* min-height:100vh; */
+  min-height:calc(100vh - 40px);
+  grid-template-rows: 4.25rem auto 13rem;
+}
+main {
+  grid-area: page;
+  align-self: start;
+}

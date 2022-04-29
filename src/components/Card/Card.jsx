@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import './Card.scss'
 
-function Card({title, cover, id}) {
+export default function Card({title, cover, id}) {
 
 	return (
 		<div>
@@ -16,5 +16,3 @@ function Card({title, cover, id}) {
 		</div>
 	)
 }
-
-export default Card

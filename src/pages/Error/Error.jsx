@@ -3,11 +3,13 @@ import "./Error.scss";
 
 function Error() {
   return (
-    <div>
-      <h1>404</h1>
-      <p>Oups ! La page que vous demandez n'existe pas.</p>
-      <Link to="/">
-        <p>Retourner sur la page d'accueil</p>
+    <div className="errorContainer">
+      <div className="errorUpperPart">
+        <h1>404</h1>
+        <p>Oups ! La page que vous demandez n'existe pas.</p>
+      </div>
+      <Link to="/" className="errorLowerPart">
+        <span>Retourner sur la page d'accueil</span>
       </Link>
     </div>
   );
