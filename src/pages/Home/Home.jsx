@@ -2,16 +2,13 @@ import './Home.scss';
 import Hero from '../../components/Hero/Hero'
 import Gallery from '../../components/Gallery/Gallery'
 
-function Home() {
+export default function Home() {
+  const text = "Chez vous, partout et ailleurs",
+        url = "/images/bg_image.jpg"
   return (
     <main className="homeContainer">
-      <Hero>
-        <h1>Chez vous, partout et ailleurs</h1>
-        <img src="/images/bg_image.jpg" alt="" />
-      </Hero>
+      <Hero title={text} url={url}/>
       <Gallery />
     </main>
   );
 }
-
-export default Home;

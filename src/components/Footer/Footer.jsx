@@ -1,6 +1,6 @@
 import './Footer.scss'
 
-function Footer() {
+export default function Footer() {
     return (
         <footer>
             <img src="/images/logo_small_white.svg" alt=""/>
@@ -8,5 +8,3 @@ function Footer() {
         </footer>
     )
 }
-
-export default Footer

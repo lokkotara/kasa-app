@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import './Header.scss'
 
-function Header() {
+export default function Header() {
     return (
         <header className='mainHeader'>
             <img src='/images/logo_small.svg' alt="logo de l'agence Kasa"></img>
@@ -14,5 +14,3 @@ function Header() {
         </header>
     )
 }
-
-export default Header

@@ -3,19 +3,15 @@ import "./About.scss";
 import Hero from '../../components/Hero/Hero'
 import { getAllAboutElements } from "../../datas/dataManager";
 
-function About() {
+export default function About() {
   const aboutElements = getAllAboutElements();
-
+  const url = "/images/mountain_bg.png"
   return (
     <main className="aboutContainer">
-      <Hero>
-        <img src="/images/mountain_bg.png" alt="" />
-      </Hero>
+      <Hero url={url}/>
       {aboutElements.map((elt) => (
         <Dropdown content={elt.content} title={elt.title} key={elt.title} />
       ))}
     </main>
   );
 }
-
-export default About;

@@ -11,15 +11,15 @@ const Accomodations = accomodations
 const AboutElements = aboutElements
 
 /**
- * [getAllAccomodations description]
+ * Retourne l'image, le titre et l'id de tous les logements
  *
- * @return  {Array.<homeAccomadation>}  [return description]
+ * @return  {Array<homeAccomadation>}  Un array d'objets
  */
 function getAllAccomodations() {
-    return Accomodations.map(accomadation =>{return {
-        cover:accomadation.cover,
-        title:accomadation.title,
-        id:accomadation.id
+    return Accomodations.map(accomadation => {return{
+        cover   : accomadation.cover,
+        id      : accomadation.id,
+        title   : accomadation.title,
     }})
 }
 function getAccomodation(id) {

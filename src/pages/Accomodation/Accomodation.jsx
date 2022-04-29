@@ -10,32 +10,17 @@ import emptyStar from "../../assets/empty-star.svg";
 import fullStar from "../../assets/full-star.svg";
 
 
-function Accomodation() {
+export default function Accomodation() {
   let { id } = useParams();
   const accomodation = getAccomodation(id);
   const range = [1, 2, 3, 4, 5];
-	const [currentPic, setCurrentPic] = useState(0);
   const name = accomodation.host.name.split(" ")
   const firstname = name[0]
   const lastname = name[1]
 
-	/**
-	 * Permet de gérer la rotation infini du caroussel d'images
-	 * @param {"previous"|"next"} order 
-	 */
-	function manageCarousel(order) {
-		if(order ==="previous") currentPic === 0 ? setCurrentPic(accomodation.pictures.length - 1) : setCurrentPic(currentPic-1)
-		if(order ==="next") currentPic === accomodation.pictures.length - 1 ? setCurrentPic(0) : setCurrentPic(currentPic+1)
-	}
-
   return (
     <main className="accomodationContainer">
-      <Hero>
-        <i className="fas fa-chevron-left chevron chevron-left" onClick={() => manageCarousel("previous")}></i>
-        <img src={accomodation.pictures[currentPic]} alt="" />
-        <i className="fas fa-chevron-right chevron chevron-right" onClick={() => manageCarousel("next")}></i>
-        <p className="pagination">{currentPic+1}/{accomodation.pictures.length}</p>
-      </Hero>
+      <Hero pictures={accomodation.pictures}/>
       <section className="headingContainer">
         <div className= "headingFirstPart">
           <div>
@@ -75,5 +60,3 @@ function Accomodation() {
     </main>
   );
 }
-
-export default Accomodation;

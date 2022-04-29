@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Error.scss";
 
-function Error() {
+export default function Error() {
   return (
     <div className="errorContainer">
       <div className="errorUpperPart">
@@ -14,5 +14,3 @@ function Error() {
     </div>
   );
 }
-
-export default Error;
