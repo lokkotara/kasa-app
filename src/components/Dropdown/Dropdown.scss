@@ -42,16 +42,22 @@
 @media (max-width: 768px) {
     .dropdown {
         .dropdownHeading {
-            font-size: 13px;
+            font-size: 13px!important;
             line-height: 19px;
             font-weight: 500;
+            padding: 0.35rem;
+            border-radius: 5px;
             i {
                 font-size: 1.1rem;
             }
         }
         .dropdownContent {
-            font-size: 0.75rem;
+            font-size: 0.75rem!important;
             min-height: 5rem;
+            // padding-top: 0.5rem;
+            li {
+                line-height: 1.1rem;
+            }
         }
     }
 }

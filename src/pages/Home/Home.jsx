@@ -7,7 +7,7 @@ export default function Home() {
     url = "/images/bg_image.jpg";
   return (
     <main className="homeContainer">
-      <Hero title={text} url={url} />
+      <Hero title={text} url={url} isFilter={true} />
       <Gallery />
     </main>
   );

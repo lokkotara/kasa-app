@@ -7,6 +7,7 @@ import React, { useState } from "react";
  * @param {String}  [props.url]
  * @param {String} [props.title]
  * @param {Array} [props.pictures]
+ * @param {Boolean} [props.isFilter]
  * @component
  */
 export default function Hero(props) {
@@ -16,10 +17,19 @@ export default function Hero(props) {
     return (
       <React.Fragment>
         <h1>{props.title}</h1>
+        {/* <div className="heroFilter"></div> */}
+      </React.Fragment>
+    );
+  }
+  function showFilter() {
+    if (!props.isFilter) return;
+    return (
+      <React.Fragment>
         <div className="heroFilter"></div>
       </React.Fragment>
     );
   }
+  
   /**
    * Permet de gérer la rotation infini du caroussel d'images
    * @param {"previous"|"next"} order
@@ -57,6 +67,7 @@ export default function Hero(props) {
     <section className="heroContainer">
       {manageHero()}
       {showTitle()}
+      {showFilter()}
     </section>
   );
 }

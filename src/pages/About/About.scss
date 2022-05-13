@@ -23,10 +23,13 @@
 
 @media (max-width:768px) {
     .aboutContainer {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        .dropdownContainer {
+            padding: 0;
+        }
+        .heroContainer {
             margin-top: 0;
-            margin-bottom: 1rem;
-            .dropdownContainer {
-                padding: 0;
-            }
+        }
     }
 }

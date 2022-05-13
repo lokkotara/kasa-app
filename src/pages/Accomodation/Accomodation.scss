@@ -116,6 +116,12 @@
             margin-top: 0;
             .chevron {
                 font-size: 1.5rem;
+                &-right {
+                    right: 0.5rem;
+                }
+                &-left {
+                    left: 0.5rem;
+                }
             }
             .pagination {
                 display: none;
@@ -136,6 +142,7 @@
         }
         p {
             font-size: 0.56rem;
+            margin-top: 1rem;
         }
         .tag {
             font-size:0.625rem;
