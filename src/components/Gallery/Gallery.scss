@@ -1,8 +1,15 @@
 .galleryContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 50px;
+    justify-content: space-evenly;
+    padding: 50px 0;
     background-color: #f6f6f6;
     border-radius: 25px;
+}
+
+@media (max-width:768px) {
+    .galleryContainer {
+        background-color: white;
+        padding: 0;
+    }
 }

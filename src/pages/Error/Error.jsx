@@ -3,7 +3,7 @@ import "./Error.scss";
 
 export default function Error() {
   return (
-    <div className="errorContainer">
+    <main className="errorContainer">
       <div className="errorUpperPart">
         <h1>404</h1>
         <p>Oups ! La page que vous demandez n'existe pas.</p>
@@ -11,6 +11,6 @@ export default function Error() {
       <Link to="/" className="errorLowerPart">
         <span>Retourner sur la page d'accueil</span>
       </Link>
-    </div>
+    </main>
   );
 }

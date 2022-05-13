@@ -1,27 +1,32 @@
-.accomodationContainer .heroContainer {
-    height: 415px;
-    margin-top: 20px;
-    .chevron {
-        font-size: 4.9em;
-        position: absolute;
-        color: #fff;
-        top: 50%;
-        transform: translateY(-50%)
-    }
-    .pagination {
-        position: absolute;
-        color: #fff;
-        bottom: 25px;
-        margin: 0;
-        font-weight: 500;
-        left: 50%;
-        transform: translateX(-50%)
-    }
-    .chevron-right {
-        right: 1.5rem;
-    }
-    .chevron-left {
-        left: 1.5rem;
+.accomodationContainer {
+    padding-bottom: 2rem;
+    .heroContainer {
+        height: 415px;
+        margin-top: 20px;
+        .chevron {
+            font-size: 4.9em;
+            position: absolute;
+            color: #fff;
+            top: 50%;
+            transform: translateY(-50%)
+        }
+        .pagination {
+            position: absolute;
+            color: #fff;
+            bottom: 25px;
+            margin: 0;
+            font-weight: 500;
+            left: 50%;
+            transform: translateX(-50%)
+        }
+        .chevron-right {
+            right: 1.5rem;
+            cursor: pointer;
+        }
+        .chevron-left {
+            left: 1.5rem;
+            cursor: pointer;
+        }
     }
 }
 .headingContainer {
@@ -39,10 +44,10 @@
     flex-direction: column;
     justify-content:space-between;
     h1 {
-        font-size: 36px;
+        font-size: 2.25rem;
     }
     p {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
     h1, p {
     margin: 0;
@@ -94,13 +99,83 @@
 .empty {
     color: #E3E3E3;
 }
-
 .DropdownContainer {
     display: flex;
     .dropdown:not(:first-child) {
         margin-left: 4rem;
     }
-    .fas {
-        font-size: 1.5rem;
+}
+
+
+@media (max-width: 768px){
+    .accomodationContainer {
+        // padding-bottom: 2rem;
+        .heroContainer {
+            height: 255px;
+            // margin-top: 20px;
+            margin-top: 0;
+            .chevron {
+                font-size: 1.5rem;
+            }
+            .pagination {
+                display: none;
+            }
+        }
+        .headingContainer {
+            flex-direction: column;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            .tagContainer {
+                margin-top: 10px;
+            }
+        }
+    }
+    .headingFirstPart {
+        h1 {
+            font-size: 1.125rem;
+        }
+        p {
+            font-size: 0.56rem;
+        }
+        .tag {
+            font-size:0.625rem;
+            border-radius: 5px;
+            padding: 0.25rem 0.89rem;
+        }
+    }
+    .headingSecondPart {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1rem;
+        .rating {
+            order: 1;
+            margin-top: 0;
+            img {
+                width: 1.1rem;
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+        .ownerIdentity {
+            order: 2;
+            img {
+                width: 2rem;
+                height: 2rem;
+            }
+            .ownerName {
+                p {
+                    font-size: 0.75rem;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .DropdownContainer {
+        flex-direction: column;
+        .dropdown:not(:first-child) {
+            margin-left: 0;
+            margin-top: 1rem;
+        }
     }
 }

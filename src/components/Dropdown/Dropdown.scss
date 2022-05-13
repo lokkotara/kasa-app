@@ -4,10 +4,18 @@
     .dropdownHeading {
         display: flex;
         justify-content: space-between;
-        padding: 1rem;
+        padding: 0.63rem;
         background-color: #FF6060;
         color: #fff;
         border-radius: 10px;
+        cursor: pointer;
+        font-size: 18px;
+        i {
+            font-size: 2rem;
+        }
+        span {
+            align-self: center;
+        }
     }
     .dropdownContent {
         color: #FF6060;
@@ -19,6 +27,31 @@
         min-height: 10rem;
         li {
             list-style: none;
+        }
+    }
+}
+// .DropdownContainer {
+//     display: flex;
+//     .dropdown:not(:first-child) {
+//         margin-left: 4rem;
+//     }
+//     .fas {
+//         font-size: 1.5rem;
+//     }
+// }
+@media (max-width: 768px) {
+    .dropdown {
+        .dropdownHeading {
+            font-size: 13px;
+            line-height: 19px;
+            font-weight: 500;
+            i {
+                font-size: 1.1rem;
+            }
+        }
+        .dropdownContent {
+            font-size: 0.75rem;
+            min-height: 5rem;
         }
     }
 }

@@ -22,12 +22,15 @@ function getAllAccomodations() {
         title   : accomadation.title,
     }})
 }
+
+
 function getAccomodation(id) {
-    return Accomodations.find(elt=>id ===elt.id)
+    return Accomodations.find(elt=>id ===elt.id);
 }
+
+
 function getAllAboutElements() {
-    return AboutElements
-    
+    return AboutElements;
 }
 
 export {

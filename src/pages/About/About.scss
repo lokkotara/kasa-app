@@ -2,7 +2,31 @@
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
+    margin-bottom: 2rem;
+    .dropdownContainer {
+        padding: 0 6.78rem;
+    }
     .dropdown:not(:first-child) {
         margin-top: 1rem;
+    }
+    .heroContainer {
+        height: 14rem;
+    }
+    .dropdownHeading {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .dropdownContent {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:768px) {
+    .aboutContainer {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            .dropdownContainer {
+                padding: 0;
+            }
     }
 }

@@ -1,13 +1,13 @@
-import './Home.scss';
-import Hero from '../../components/Hero/Hero'
-import Gallery from '../../components/Gallery/Gallery'
+import "./Home.scss";
+import Hero from "../../components/Hero/Hero";
+import Gallery from "../../components/Gallery/Gallery";
 
 export default function Home() {
   const text = "Chez vous, partout et ailleurs",
-        url = "/images/bg_image.jpg"
+    url = "/images/bg_image.jpg";
   return (
     <main className="homeContainer">
-      <Hero title={text} url={url}/>
+      <Hero title={text} url={url} />
       <Gallery />
     </main>
   );

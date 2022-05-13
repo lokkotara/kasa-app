@@ -1,6 +1,5 @@
 import "./Accomodation.scss";
-import { useParams } from "react-router-dom";
-import { useState } from 'react';
+import { Navigate, useParams } from "react-router-dom";
 import { getAccomodation } from "../../datas/dataManager";
 import Hero from "../../components/Hero/Hero";
 import Dropdown from "../../components/Dropdown/Dropdown";
@@ -9,31 +8,32 @@ import emptyStar from "../../assets/empty-star.svg";
 // @ts-ignore
 import fullStar from "../../assets/full-star.svg";
 
-
 export default function Accomodation() {
-  let { id } = useParams();
-  const accomodation = getAccomodation(id);
-  const range = [1, 2, 3, 4, 5];
-  const name = accomodation.host.name.split(" ")
-  const firstname = name[0]
-  const lastname = name[1]
-
+  const { id }          = useParams();
+  if (getAccomodation(id) === undefined) return <Navigate to="/Error"/>;
+  const accomodation    = getAccomodation(id);  
+  const range           = [1, 2, 3, 4, 5];
+  const name            = accomodation.host.name.split(" ");
+  const firstname       = name[0];
+  const lastname        = name[1];
   return (
     <main className="accomodationContainer">
-      <Hero pictures={accomodation.pictures}/>
+      <Hero pictures={accomodation.pictures} />
       <section className="headingContainer">
-        <div className= "headingFirstPart">
+        <div className="headingFirstPart">
           <div>
             <h1>{accomodation.title}</h1>
             <p>{accomodation.location}</p>
           </div>
           <div className="tagContainer">
             {accomodation.tags.map((tag) => (
-              <span className="tag" key={tag}>{tag}</span>
+              <span className="tag" key={tag}>
+                {tag}
+              </span>
             ))}
           </div>
         </div>
-        <div className= "headingSecondPart">
+        <div className="headingSecondPart">
           <div className="ownerIdentity">
             <div className="ownerName">
               <p>{firstname}</p>
@@ -44,18 +44,25 @@ export default function Accomodation() {
           <div className="rating">
             {range.map((ratingElt, index) =>
               parseInt(accomodation.rating) >= ratingElt ? (
-                <img src={fullStar} alt="" key={"fs"+index}/>
-                
+                <img src={fullStar} alt="" key={"fs" + index} />
               ) : (
-                <img src={emptyStar} alt="" key={"es"+index}/>
+                <img src={emptyStar} alt="" key={"es" + index} />
               )
             )}
           </div>
         </div>
       </section>
       <section className="DropdownContainer">
-        <Dropdown content={accomodation.description} title="Description" key={accomodation.id+"desc"}/>
-        <Dropdown content={accomodation.equipments} title="Equipements" key={accomodation.id+"equip"}/>
+        <Dropdown
+          content={accomodation.description}
+          title="Description"
+          key={accomodation.id + "Desc"}
+        />
+        <Dropdown
+          content={accomodation.equipments}
+          title="Equipements"
+          key={accomodation.id + "Equip"}
+        />
       </section>
     </main>
   );

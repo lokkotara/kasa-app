@@ -2,6 +2,8 @@
     position: relative;
     width: 100%;
     height: 14rem;
+    // margin-top:4rem;
+    margin-bottom:2.4rem;
     h1{
         position: absolute;
         top: 50%;
@@ -14,10 +16,17 @@
         margin: 0;
         text-align: center;
         font-weight: 500;
+        border-radius: 25px;
+    }
+    .heroFilter {
+        width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.3);
         border-radius: 25px;
-        line-height: 4.5;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     img {
         width: 100%;
@@ -25,5 +34,25 @@
         height: 100%;
         object-fit: cover;
         border-radius: 25px;
+    }
+}
+@media (max-width:768px) {
+    .heroContainer {
+        margin: 1rem 0;
+        height: 6.94rem;
+        img {
+            border-radius: 10px;
+            object-position: center bottom;
+        }
+        h1 {
+            font-size: 1.5rem;
+            text-align: start;
+            width: 65%;
+            transform: translate(10px, -50%);
+        left: 10px;
+        }
+        .heroFilter {
+        border-radius: 10px;
+        }
     }
 }

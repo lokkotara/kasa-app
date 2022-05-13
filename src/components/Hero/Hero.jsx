@@ -13,7 +13,12 @@ export default function Hero(props) {
   const [currentPic, setCurrentPic] = useState(0);
   function showTitle() {
     if (!props.title) return;
-    return <h1>{props.title}</h1>;
+    return (
+      <React.Fragment>
+        <h1>{props.title}</h1>
+        <div className="heroFilter"></div>
+      </React.Fragment>
+    );
   }
   /**
    * Permet de gérer la rotation infini du caroussel d'images

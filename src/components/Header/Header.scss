@@ -2,7 +2,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    margin-bottom: 63px;
+    // margin-bottom: 63px;
     grid-area: header;
 }
 .mainHeader>img {
@@ -13,11 +13,10 @@
     list-style-type: none;
 }
 .mainHeader>nav li {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 500;
     color: #ff6060;
     .active {
-        // border-bottom: 1px solid #ff6060;
         text-decoration: underline;
     }
 }
@@ -27,4 +26,16 @@
 .mainHeader>nav a {
     text-decoration: none;
     color: inherit;
+}
+
+@media screen and (max-width:768px) {
+    .mainHeader>img {
+        height: 2.94rem;
+    }
+    .mainHeader>nav li {
+        font-size: 0.75rem;
+    }
+    .mainHeader>nav li:not(:first-child) {
+        margin-left: 0.63rem
+    }
 }

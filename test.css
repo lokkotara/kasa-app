@@ -1,0 +1,44 @@
+:root{
+  --wrapper : 100vw;
+  --wrapperPadding: calc( calc(100vw - var(--wrapper)) / 2);
+
+}
+
+@media screen AND (min-width:768px){
+  :root{
+    --wrapper : 40rem;
+  }
+}
+@media screen AND (min-width:1440px){
+  :root{
+    --wrapper : 1240px;
+  }
+}
+
+
+
+body{
+  display:grid;
+  grid-template-areas: ". header ."
+    ". main . "
+    "footer footer footer";
+  grid-template-columns: auto var(--wrapper) auto;
+  margin:0;
+  grid-template-rows: 4rem auto 4rem;
+  min-height:100vh;
+}
+
+footer{
+  grid-area: footer;
+  background-color: red;
+  padding: 0 var(--wrapperPadding);
+}
+
+
+main{
+  grid-area: main;
+}
+
+header{
+  grid-area: header;
+}
