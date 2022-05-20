@@ -14,6 +14,7 @@ export default function Dropdown({ content, title }) {
         </div>
       );
     }
+    
     return (
       <React.Fragment>
         <div className="dropdownHeading" onClick={() => toggleOpen(0)}>

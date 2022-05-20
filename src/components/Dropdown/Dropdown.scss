@@ -30,15 +30,7 @@
         }
     }
 }
-// .DropdownContainer {
-//     display: flex;
-//     .dropdown:not(:first-child) {
-//         margin-left: 4rem;
-//     }
-//     .fas {
-//         font-size: 1.5rem;
-//     }
-// }
+
 @media (max-width: 768px) {
     .dropdown {
         .dropdownHeading {
@@ -54,7 +46,6 @@
         .dropdownContent {
             font-size: 0.75rem!important;
             min-height: 5rem;
-            // padding-top: 0.5rem;
             li {
                 line-height: 1.1rem;
             }

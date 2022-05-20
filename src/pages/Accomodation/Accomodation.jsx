@@ -16,6 +16,7 @@ export default function Accomodation() {
   const name            = accomodation.host.name.split(" ");
   const firstname       = name[0];
   const lastname        = name[1];
+  
   return (
     <main className="accomodationContainer">
       <Hero pictures={accomodation.pictures} />

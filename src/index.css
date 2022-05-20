@@ -20,7 +20,7 @@ main {
   grid-area: page;
   align-self: start;
 }
-@media (max-width: 768px) {
+@media (max-width: 1439px) {
   body {
     margin-top: 20px;
   }
