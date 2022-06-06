@@ -5,7 +5,7 @@
 
 body {
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 2.5rem;
   font-family: 'Montserrat', sans-serif;
   max-width: 1440px;
 }
@@ -13,7 +13,7 @@ body {
   display:grid;
   grid-template-areas: ". header ." ". page ." "footer footer footer";
   grid-template-columns: auto var(--wrapper) auto;
-  min-height:calc(100vh - 39px);
+  min-height:calc(100vh - 2.5rem);
   grid-template-rows: 4.25rem auto 13rem;
 }
 main {
@@ -22,12 +22,12 @@ main {
 }
 @media (max-width: 1439px) {
   body {
-    margin-top: 20px;
+    margin-top: 1.25rem;
   }
   :root {
     --wrapper : 89.3vw;
   }
   #root {
-  min-height:calc(100vh - 20px);
+  min-height:calc(100vh - 1.25rem);
   }
 }

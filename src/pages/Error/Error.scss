@@ -1,3 +1,5 @@
+@import '../../style/variables';
+
 .errorContainer {
   display: flex;
   flex-direction: column;
@@ -13,22 +15,22 @@
   }
   h1 {
     font-size: 18rem;
-    color: #ff6060;
+    color: $primary;
     font-weight: bold;
     margin: 0;
   }
   p {
     margin: 0;
-    font-size: 36px;
-    color: #ff6060;
+    font-size: 2.25rem;
+    color: $primary;
     font-weight: 500;
     text-align:center;
   }
   .errorLowerPart {
-    text-decoration-color: #ff6060;
+    text-decoration-color: $primary;
     span {
-      color: #ff6060;
-      font-size: 18px;
+      color: $primary;
+      font-size: 1.125rem;
       font-weight: 500;
     }
   }
@@ -41,13 +43,13 @@
       font-size: 6rem;
     }
     p {
-      font-size: 18px;
+      font-size: 1.125rem;
       padding: 0 1rem;
       margin-top: 1rem;
     }
     .errorLowerPart {
       span {
-        font-size: 14px;
+        font-size: 0.875rem;
       }
     }
   }

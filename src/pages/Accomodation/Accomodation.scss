@@ -1,19 +1,21 @@
+@import '../../style/variables';
+
 .accomodationContainer {
     padding-bottom: 2rem;
     .heroContainer {
-        height: 415px;
-        margin-top: 20px;
+        height: 25.93rem;
+        margin-top: 1.25rem;
         .chevron {
             font-size: 4.9em;
             position: absolute;
-            color: #fff;
+            color: $light;
             top: 50%;
             transform: translateY(-50%)
         }
         .pagination {
             position: absolute;
-            color: #fff;
-            bottom: 25px;
+            color: $light;
+            bottom: 1.5625rem;
             margin: 0;
             font-weight: 500;
             left: 50%;
@@ -30,7 +32,7 @@
     }
 }
 .headingContainer {
-    color: #FF6060;
+    color: $primary;
     display: flex;
     justify-content: space-between;
     margin-bottom: 2rem;
@@ -54,11 +56,11 @@
     font-weight: 500;
     }
     .tag {
-        background-color: #FF6060;
-        color: #fff;
+        background-color: $primary;
+        color: $light;
         padding: 0.25rem 2rem;
-        border-radius: 10px;
-        font-size: 14px;
+        border-radius: 0.625rem;
+        font-size: 0.875rem;
         &:not(:first-of-type) {
             margin-left: 10px;
         }
@@ -87,17 +89,17 @@
             text-align: end;
             p {
                 margin: 0.5rem;
-                font-size: 18px;
+                font-size: 1.125rem;
                 font-weight: 500;
             }
         }
     }
 } 
 .full {
-    color: #FF6060;
+    color: $primary;
 }
 .empty {
-    color: #E3E3E3;
+    color: $secondary;
 }
 .DropdownContainer {
     display: flex;

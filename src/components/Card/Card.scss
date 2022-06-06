@@ -1,44 +1,46 @@
+@import '../../style/variables';
+
 .accomodationCard {
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 3.0125rem;
 }
 .accomodationCard a{
     text-decoration: none;
 }
 
 .accomodationCard h1 {
-    color: white;
+    color: $light;
     position: absolute;
     bottom: 0.5rem;
     left: 0.5rem;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 500;
 }
 
 .accomodationCard .cardGradient {
-    height: 170px;
+    height: 10.625rem;
     width: 100%;
-    background: linear-gradient(transparent, black);
+    background: linear-gradient(transparent, $dark);
     position: absolute;
     bottom: 0;
-    border-radius: 10px;
+    border-radius: 0.625rem;
 }
 
 .accomodationCard .thumbs {
-    width: 340px;
-    height: 340px;
+    width: 21.25rem;
+    height: 21.25rem;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 0.625rem;
 }
 
 @media (max-width:768px) {
     .accomodationCard {
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
         .thumbs {
-            width: 335px;
-            height: 255px;
+            width: 20.93rem;
+            height: 15.94rem;
             object-fit: cover;
-            border-radius: 10px;
+            border-radius: 0.625rem;
         }
     }
 }

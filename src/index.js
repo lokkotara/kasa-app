@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './style/index.scss';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
@@ -17,7 +17,6 @@ ReactDOM.render(
       <Route path="/" element={<Home />}/>
       <Route path="About" element={<About />} />
       <Route path="Accomodation/:id" element={<Accomodation />} />
-      <Route path="Accomodation/*" element={<Error />} />
       <Route path="*" element={<Error />} />
     </Routes>
     <Footer />

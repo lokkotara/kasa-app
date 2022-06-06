@@ -1,3 +1,5 @@
+@import '../../style/variables';
+
 .dropdown {
     flex: 1;
     
@@ -5,11 +7,11 @@
         display: flex;
         justify-content: space-between;
         padding: 0.63rem;
-        background-color: #FF6060;
-        color: #fff;
-        border-radius: 10px;
+        background-color: $primary;
+        color: $light;
+        border-radius: 0.625rem;
         cursor: pointer;
-        font-size: 18px;
+        font-size: 1.125rem;
         i {
             font-size: 2rem;
         }
@@ -18,12 +20,12 @@
         }
     }
     .dropdownContent {
-        color: #FF6060;
-        background-color: #F6F6F6;
+        color: $primary;
+        background-color: $secondary;
         margin: 0;
         padding: 1rem;
         padding-top: 1.5rem;
-        border-radius: 10px;
+        border-radius: 0.625rem;
         min-height: 10rem;
         li {
             list-style: none;
@@ -34,11 +36,11 @@
 @media (max-width: 768px) {
     .dropdown {
         .dropdownHeading {
-            font-size: 13px!important;
-            line-height: 19px;
+            font-size: 0.8125rem!important;
+            line-height: 1.1875rem;
             font-weight: 500;
             padding: 0.35rem;
-            border-radius: 5px;
+            border-radius: 0.3125rem;
             i {
                 font-size: 1.1rem;
             }
