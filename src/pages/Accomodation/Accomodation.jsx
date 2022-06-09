@@ -9,13 +9,11 @@ import emptyStar from "../../assets/empty-star.svg";
 import fullStar from "../../assets/full-star.svg";
 
 export default function Accomodation() {
-  const { id }          = useParams();
+  const { id }                  = useParams();
   if (getAccomodation(id) === undefined) return <Navigate to="/Error"/>;
-  const accomodation    = getAccomodation(id);  
-  const range           = [1, 2, 3, 4, 5];
-  const name            = accomodation.host.name.split(" ");
-  const firstname       = name[0];
-  const lastname        = name[1];
+  const accomodation            = getAccomodation(id);
+  const range                   = [1, 2, 3, 4, 5];
+  const [firstname,lastname]    = accomodation.host.name.split(" ");
   
   return (
     <main className="accomodationContainer">
